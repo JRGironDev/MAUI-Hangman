@@ -4,7 +4,7 @@
              x:Class="Hangman.MainPage">
 
     <Grid RowDefinitions=".6*, .4*">
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="10">
             <Label
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
@@ -18,7 +18,7 @@
             <Label
                 FontSize="40"
                 HorizontalOptions="Center"
-                Text="_ _ _ C _ _ _"
+                Text="{Binding Spotlight}"
                 VerticalOptions="Center" />
 
             <Label
