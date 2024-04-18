@@ -3,6 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hangman.MainPage">
 
+    <Grid RowDefinitions=".6*, .4*">
+        <VerticalStackLayout>
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="Errors: 0 of 6" />
 
+            <Image
+                Source="img0.jpg" 
+                HorizontalOptions="Center"
+                HeightRequest="200" />
+
+            <Label
+                FontSize="40"
+                HorizontalOptions="Center"
+                Text="_ _ _ C _ _ _"
+                VerticalOptions="Center" />
+
+            <Label
+                FontSize="Large"
+                HorizontalTextAlignment="Center"
+                Text="You Lose!" />
+
+            <Button
+                Text="Reset"
+                HorizontalOptions="Center"
+                WidthRequest="100" />
+        </VerticalStackLayout>
+
+    </Grid>
 
 </ContentPage>
