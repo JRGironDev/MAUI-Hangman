@@ -15,28 +15,41 @@ public partial class MainPage : ContentPage, INotifyPropertyChanged
 		}
 	}
 
+	public List<char> Letters { 
+		get => letters;
+		set {
+			letters = value; 
+			OnPropertyChanged();
+		}
+	}
+
 	#endregion
 
     #region Fields
     List<string> words = new List<string> { "apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi", "lemon", "mango", "nectarine", "orange", "papaya", "quince", "raspberry", "strawberry", "tangerine", "watermelon" };
 
 	string answer = "";
-    private string spotlight;
+
+    private string spotlight = "";
+
+	private List<char> letters = new List<char>();
 
 	List<char> guessed = new List<char>();
 
     #endregion
 
-    public MainPage()
-	{
-		InitializeComponent();
+public MainPage()
+{
+	InitializeComponent();
 
-		BindingContext = this;
+	Letters.AddRange("abcdefghijklmnopqrstuvwxyz");
 
-		PickWord();
+	BindingContext = this;
 
-		CalculateWord(answer, guessed);
-	}
+	PickWord();
+
+	CalculateWord(answer, guessed);
+}
 
 	#region Game Engine
 	private void PickWord()

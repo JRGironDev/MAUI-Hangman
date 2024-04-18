@@ -35,163 +35,17 @@
         <FlexLayout 
             Grid.Row="1"
             Wrap="Wrap"
-            JustifyContent="SpaceEvenly">
-            <Button
-                Text="A"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-
-            <Button 
-                Text="B"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="C"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="D"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="E"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-
-            <Button
-                Text="F"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="G"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="H"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="I"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="J"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="K"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="L"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="M"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="N"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="O"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="P"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="Q"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-
-            <Button
-                Text="R"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="S"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="T"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="U"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="V"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="W"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="X"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="Y"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-            
-            <Button
-                Text="Z"
-                BackgroundColor="Navy"
-                WidthRequest="50" 
-                HeightRequest="50"/>
-
+            JustifyContent="SpaceEvenly"
+            BindableLayout.ItemsSource="{Binding Letters}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button
+                        Text="{Binding .}"
+                        BackgroundColor="Navy"
+                        WidthRequest="50" 
+                        HeightRequest="50"/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
         </FlexLayout>
     </Grid>
 
